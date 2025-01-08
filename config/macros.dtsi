@@ -2,7 +2,7 @@ macro_shortcat: macro_shortcat{
 compatible = "zmk,behavior-macro";
 label = "macro_shortcat";
 #binding-cells = <0>;
-bindings = <&kp CAPS>, <&kp ENTER>;
+bindings = <&kt CAPS>, <&kp ENTER>, <&kt CAPS>;
 };
 macro_recent: macro_recent{
 compatible = "zmk,behavior-macro";
