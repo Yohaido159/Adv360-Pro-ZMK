@@ -14,7 +14,7 @@ macro_raycast: macro_raycast{
 compatible = "zmk,behavior-macro";
 label = "macro_raycast";
 #binding-cells = <0>;
-bindings = <&kt LEFT_GUI>, <&kp SPACE>, <&kt RCMD>;
+bindings = <&kt LEFT_GUI>, <&kp SPACE>, <&kt LEFT_COMMAND>;
 };
 macro_quotes: macro_quotes{
 compatible = "zmk,behavior-macro";
