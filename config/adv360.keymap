@@ -64,7 +64,7 @@
  &trans        &kp MINUS     &kp CARET  &kp AMPERSAND  &kp ASTERISK     &kp PLUS             &none                                                                    &none             &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET                 &trans   &trans   &trans
  &trans  &kp EXCLAMATION        &kp AT       &kp HASH    &kp DOLLAR  &kp PERCENT             &none  &trans  &trans                  &trans           &trans           &none  &kp LEFT_PARENTHESIS          &kp LBRC    &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS   &trans   &trans
  &trans         &kp PIPE  &kp KP_EQUAL       &kp FSLH      &kp BSLH    &kp UNDER                            &trans                  &trans                                              &kp MINUS            &kp LT             &kp GT                 &trans   &trans   &trans
- &trans           &trans        &trans         &trans        &trans                         &trans  &trans  &trans                  &trans  &macro_shortcat  &macro_raycast                                  &trans             &trans                 &trans   &trans   &trans
+ &trans           &trans        &trans         &trans        &tog 1                         &trans  &trans  &trans                  &trans  &macro_shortcat  &macro_raycast                                  &trans             &trans                 &trans   &trans   &trans
             >;
         };
 
