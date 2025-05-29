@@ -31,6 +31,22 @@
         };
     };
 
+    macros {
+        chrome: chrome {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(PIPE)>;
+            label = "CHROME";
+        };
+
+        warp: warp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(PIPE)>;
+            label = "WARP";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
