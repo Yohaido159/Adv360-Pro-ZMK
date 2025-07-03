@@ -45,6 +45,13 @@
             bindings = <&kp LC(PIPE)>;
             label = "WARP";
         };
+
+        change_lang: change_lang {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LG(SPACE))>;
+            label = "CHANGE_LANG";
+        };
     };
 
     keymap {
@@ -72,11 +79,11 @@
 
         layer_fn {
             bindings = <
-&kp F1  &kp F2           &kp F3        &kp F4         &kp F5        &kp F6       &tog 1                                             &mo 3           &kp F7                &kp F8            &kp F9             &kp F10                &kp F11       &kp F12
-&trans  &kp MINUS        &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp PLUS     &none                                              &none           &kp EQUAL             &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans                 &trans        &trans
-&tog 1  &kp EXCLAMATION  &kp AT        &kp HASH       &kp DOLLAR    &kp PERCENT  &none   &trans  &trans      &trans         &trans  &none           &kp LEFT_PARENTHESIS  &kp LBRC          &kp RIGHT_BRACE    &kp RIGHT_PARENTHESIS  &kp COLON     &kp DOUBLE_QUOTES
-&trans  &kp PIPE         &kp KP_EQUAL  &kp FSLH       &kp BSLH      &kp UNDER                    &trans      &kp LA(MINUS)                          &kp MINUS             &kp LT            &kp GT             &trans                 &kp QUESTION  &trans
-&trans  &trans           &trans        &trans         &tog 1                     &trans  &trans  &trans      &kp LC(MINUS)  &trans  &macro_raycast                        &trans            &trans             &trans                 &trans        &trans
+&kp F1        &kp F2           &kp F3        &kp F4         &kp F5        &kp F6       &tog 1                                             &mo 3           &kp F7                &kp F8            &kp F9             &kp F10                &kp F11       &kp F12
+&trans        &kp MINUS        &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp PLUS     &none                                              &none           &kp EQUAL             &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans                 &trans        &trans
+&change_lang  &kp EXCLAMATION  &kp AT        &kp HASH       &kp DOLLAR    &kp PERCENT  &none   &trans  &trans      &trans         &trans  &none           &kp LEFT_PARENTHESIS  &kp LBRC          &kp RIGHT_BRACE    &kp RIGHT_PARENTHESIS  &kp COLON     &kp DOUBLE_QUOTES
+&trans        &kp PIPE         &kp KP_EQUAL  &kp FSLH       &kp BSLH      &kp UNDER                    &trans      &kp LC(TAB)                            &kp MINUS             &kp LT            &kp GT             &trans                 &kp QUESTION  &trans
+&trans        &trans           &trans        &trans         &tog 1                     &trans  &trans  &trans      &kp LC(MINUS)  &trans  &macro_raycast                        &trans            &trans             &trans                 &trans        &trans
             >;
         };
 
