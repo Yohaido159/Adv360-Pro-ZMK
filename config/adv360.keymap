@@ -20,15 +20,13 @@
         #include "macros.dtsi"
     #include "version.dtsi"
 
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <175>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&mo 2>, <&kp LA(MINUS)>;
         };
+
     };
 
     macros {
@@ -52,6 +50,7 @@
             bindings = <&kp LS(LG(SPACE))>;
             label = "CHANGE_LANG";
         };
+
     };
 
     keymap {
@@ -59,11 +58,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &tog 1                                                        &mo 3      &kp NUMBER_6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
-&kp TAB    &kp Q         &kp W         &kp E         &kp R         &kp T   &none                                                         &none      &kp Y         &kp U   &kp I      &kp O    &kp P     &none
-&kp CAPS   &kp A         &kp S         &kp D         &kp F         &kp G   &none     &kp LCTRL  &kp LALT            &kp LGUI  &kp RCTRL  &none      &kp H         &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z         &kp X         &kp C         &kp V         &kp B                        &macro_raycast      &warp                           &kp N         &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE     &kp CAPS      &kp TILDE     &kp GRAVE             &kp BSPC  &mo 2      &kp LEFT_GUI        &chrome   &kp ENTER  &kp SPACE                &kp UP  &kp DOWN   &trans   &trans    &mo 2
+&kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &tog 1                                                              &mo 3      &kp NUMBER_6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
+&kp TAB    &kp Q         &kp W         &kp E         &kp R         &kp T   &none                                                               &none      &kp Y         &kp U   &kp I      &kp O    &kp P     &none
+&kp CAPS   &kp A         &kp S         &kp D         &kp F         &kp G   &none     &kp LCTRL        &kp LALT            &kp LGUI  &kp RCTRL  &none      &kp H         &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z         &kp X         &kp C         &kp V         &kp B                              &macro_raycast      &warp                           &kp N         &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+&mo 2      &kp GRAVE     &kp CAPS      &kp TILDE     &kp GRAVE             &kp BSPC  &td0  &kp LEFT_GUI        &chrome   &kp ENTER  &kp SPACE                &kp UP  &kp DOWN   &trans   &trans    &mo 2
             >;
         };
 
@@ -108,3 +107,4 @@
         };
     };
 };
+
